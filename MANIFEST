@@ -1,10 +1,17 @@
+Build.PL
 Changes
-MANIFEST
-META.yml # Will be created by "make dist"
-Makefile.PL
-README
+LICENSE
+META.json
+README.md
+cpanfile
 lib/Parallel/Simple.pm
-t/00-load.t
-t/boilerplate.t
-t/pod-coverage.t
-t/pod.t
+lib/Parallel/Simple/Chain.pm
+lib/Parallel/Simple/Task.pm
+t/00_compile.t
+t/01_basic.t
+t/02_anyevent.t
+t/03_context.t
+t/04_join.t
+t/05_args.t
+META.yml
+MANIFEST

@@ -1,11 +1,47 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Parallel-Simple
-version:      0.01
-version_from: lib/Parallel/Simple.pm
-installdirs:  site
+---
+abstract: 'run parallel task with fork to simple.'
+author:
+  - 'karupanerura <karupa@cpan.org>'
+build_requires:
+  Test::More: 0
+  Test::Requires: 0
+  Test::SharedFork: 0
+configure_requires:
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Minilla/v0.7.0, CPAN::Meta::Converter version 2.132140'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Parallel-Simple
+no_index:
+  directory:
+    - t
+    - xt
+    - inc
+    - share
+    - eg
+    - examples
+    - author
+provides:
+  Parallel::Simple:
+    file: lib/Parallel/Simple.pm
+    version: 0.01
+  Parallel::Simple::Chain:
+    file: lib/Parallel/Simple/Chain.pm
+  Parallel::Simple::Task:
+    file: lib/Parallel/Simple/Task.pm
 requires:
-    Test::More:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+  AnyEvent: 0
+  Class::Accessor::Lite: 0
+  Try::Tiny: 0
+  parent: 0
+  perl: 5.008005
+resources:
+  bugtracker: https://github.com/karupanerura/Parallel-Simple/issues
+  homepage: https://github.com/karupanerura/Parallel-Simple
+  repository: git://github.com/karupanerura/Parallel-Simple.git
+version: 0.01
